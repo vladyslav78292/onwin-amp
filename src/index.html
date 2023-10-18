@@ -9,7 +9,7 @@
     <link rel="shortcut icon" href="images/favicon.svg" type="image/x-icon">
     <link rel="canonical" href="https://ngonco.net/">
     <meta name="robots" content="noarchive">
-    <!-- <script type="application/ld+json">
+    <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "FAQPage",
@@ -36,7 +36,7 @@
           }
         }]
       }
-      </script> -->
+      </script>
     <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
     <style amp-custom>
       * {
@@ -273,10 +273,6 @@
 
       .table__element--first {
         border-left: none;
-      }
-
-      .test {
-        border-bottom: 3px solid pink;
       }
 
       .first-table-title {
@@ -696,6 +692,90 @@
           max-width: 300px;
           min-width: 250px;
         }
+      }
+
+      .dropdown {
+        min-width: 15em;
+        position: relative;
+        margin-top: 16px;
+      }
+
+      .select {
+        background: #C625AC;
+        color: #fff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: 2px #C625AC solid;
+        border-radius: 0.5em;
+        padding: 12px 16px;
+        cursor: pointer;
+      }
+
+      .selected {
+        font-size: 18px;
+        font-weight: 500;
+      }
+
+      .select-clicked {
+        border: 1px #FFD60E solid;
+        border-bottom: none;
+      }
+
+      .caret {
+        width: 0;
+        height: 0;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-top: 6px solid #fff;
+        transition: 0.3s;
+      }
+
+      .caret-rotate {
+        transform: rotate(180deg);
+      }
+
+      .menu {
+        list-style: none;
+        border: 1px #C625AC solid;
+        box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.2);
+        border-radius: 0.5em;
+        color: #9fa5b5;
+        top: 3em;
+        width: 100%;
+        opacity: 0;
+        display: none;
+        transition: 0.2s;
+        z-index: 1;
+        margin-top: 16px;
+      }
+
+      .menu li {
+        padding: 12px 16px;
+        border-radius: 0.5em;
+        cursor: pointer;
+        font-size: 15px;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+      }
+
+      .menu-open {
+        display: block;
+        opacity: 1;
+        color: #fff;
+        background-color: #C625AC;
+        opacity: 0.8;
+      }
+
+      .dropdown__element {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+      }
+
+      .dropdown--last {
+        margin-bottom: 93px;
       }
     </style>
   </head>
@@ -1230,6 +1310,53 @@
           çekme gibi konularda çok daha konforlu bir şekilde hareket etmeleri söz 
           konusu olur.</li>
       </ol>
+      <section class="section">
+        <h2 id='sss' class="questions">
+          SSS
+        </h2>
+        <div class="dropdown">
+          <div class="select select-clicked">
+            <span class="selected" >Bir bahisten maksimum ne kadar kazanabilirim?</span>
+            <div class="caret"></div>
+          </div>
+          <ul class="menu dropdown__list menu-open">
+            <li class="dropdown__element">
+              <div class="caret caret-rotate"></div>
+              <p>
+                Onwin'de bahisten maksimum kazanç miktarı, bahis türüne, etkinin oranına ve site politikalarına bağlı olarak değişebilir. Genellikle her bahis türü için belirli bir maksimum kazanç sınırı bulunur, bu nedenle kazançlarınız bahis türünüze ve oranına göre farklılık gösterebilir.
+              </p>
+            </li>
+          </ul>
+        </div>
+        <div class="dropdown">
+          <div class="select select-clicked">
+            <span class="selected" >Hesabımdaki parayı çekmek istiyorum. Nasıl talepte bulunacağım?</span>
+            <div class="caret"></div>
+          </div>
+          <ul class="menu dropdown__list menu-open">
+            <li class="dropdown__element">
+              <div class="caret caret-rotate"></div>
+              <p>
+                Onwin'de hesabınızdaki parayı çekmek için, öncelikle hesabınıza giriş yapmalı ve \"Para Çekme\" veya benzeri bir seçeneği seçmelisiniz. Daha sonra çekmek istediğiniz miktarı ve ödeme yöntemini seçerek talebinizi oluşturabilirsiniz. Talebiniz, site politikalarına göre işleme alınacaktır.
+              </p>
+            </li>
+          </ul>
+        </div>
+        <div class="dropdown">
+          <div class="select select-clicked">
+            <span class="selected" >Onwin Bet'in bir uygulaması var mı?</span>
+            <div class="caret"></div>
+          </div>
+          <ul class="menu menu-open dropdown__list">
+            <li class="dropdown__element">
+              <div class="caret caret-rotate"></div>
+              <p>
+                Onwin, mobil cihazlar için optimize edilmiş bir web sitesi sunmaktadır, ancak bağımsız bir uygulaması bulunmamaktadır. Mobil tarayıcınızı kullanarak siteye erişebilir ve mobil cihazlarınızda bahis yapabilirsiniz.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
     </main>
     <footer class="footer">
       <p class="footer-copy">Tüm haklara ve koşullara saygı duyulur. Onwin © 2023</p>
